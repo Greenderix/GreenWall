@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infofruhod"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <ImageView
+        android:id="@+id/cornerbigrect"
+
+        android:layout_width="match_parent"
+        android:layout_height="427dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="450dp"
+        android:foregroundGravity="top"
+
+        app:srcCompat="@drawable/backgroundnew" />
+
+    <ImageView
+        android:id="@+id/desc_img1"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/desc_header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="Dummy Header"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/desc_desc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="340dp"
+        android:text="Dummy Description"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bttmnavbackground"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@color/bluedark"
+        app:itemTextColor="@color/bluedark"
+        app:menu="@menu/bttmnav"
+        android:id="@+id/bttmnavig"
+
+        />
+
+    <ImageView
+        android:id="@+id/rectinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@drawable/rectinfo"
+        />
+
+    <TextView
+        android:id="@+id/discription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показатели растения на данный момент"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        />
+
+    <ImageView
+        android:id="@+id/rain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="510dp"
+        app:srcCompat="@drawable/rectrain" />
+
+    <ImageView
+        android:id="@+id/rectforrain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="515dp"
+        app:srcCompat="@drawable/rectangle_numbers" />
+
+
+
+    <ImageView
+        android:id="@+id/temper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="517dp"
+        app:srcCompat="@drawable/temperature" />
+
+    <ImageView
+        android:id="@+id/rain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="605dp"
+        app:srcCompat="@drawable/rectrain" />
+    <ImageView
+        android:id="@+id/rain3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="700dp"
+        app:srcCompat="@drawable/rectrain" />
+
+    <TextView
+        android:id="@+id/temperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="520dp"
+        android:text="Температура"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/rectforrain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="610dp"
+        app:srcCompat="@drawable/rectangle_numbers" />
+    <ImageView
+        android:id="@+id/vlazh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="612dp"
+        app:srcCompat="@drawable/vlazhnost" />
+
+    <ImageView
+        android:id="@+id/rectforrain3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="705dp"
+        app:srcCompat="@drawable/rectangle_numbers" />
+    <ImageView
+        android:id="@+id/davl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="702dp"
+        app:srcCompat="@drawable/davlenie" />
+
+    <TextView
+        android:id="@+id/wet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="615dp"
+        android:text="Влажность"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/attitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="710dp"
+        android:text="Давление"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="@android:string/cancel"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/backtrhrow" />
+
+
+
+
+</FrameLayout>

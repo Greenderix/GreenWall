@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824149289515",
+    "project_id": "gwsol-fe480",
+    "storage_bucket": "gwsol-fe480.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824149289515:android:870bd9222bd70230fdd86e",
+        "android_client_info": {
+          "package_name": "com.example.gwsol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824149289515-uhh60bv7j16f70t2g59vkf2vk7ecpdcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSSjIepqMgkVHSa7gemLqZaWdlmJP-EVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824149289515-uhh60bv7j16f70t2g59vkf2vk7ecpdcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Уход"
+        android:enabled="true"
+        android:id="@+id/uhod"
+        android:icon="@drawable/bttmnav_uhod"
+        />
+    <item
+        android:title="Мой профиль"
+        android:enabled="true"
+        android:id="@+id/profile"
+        android:icon="@drawable/bttmnav_person"
+        />
+    <item
+        android:title="Лента"
+        android:enabled="true"
+        android:id="@+id/lenta"
+        android:icon="@drawable/bttmnav_lenta"
+        />
+
+
+</menu>

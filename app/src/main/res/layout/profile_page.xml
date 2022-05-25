@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".View.Fragments.Page_Profile">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Count Растений"
+            android:textColor="@color/redorange"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/listok"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="94dp" />
+
+        <ImageButton
+            android:id="@+id/addbttn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pluss" />
+
+        <TextView
+            android:id="@+id/profileDescpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Добавлено от Вас, User"
+            android:textColor="@color/bluedark"
+            app:layout_constraintBottom_toTopOf="@+id/recview"
+            app:layout_constraintStart_toEndOf="@+id/listok"
+            app:layout_constraintTop_toBottomOf="@+id/textCount"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="256dp" />
+
+        <ImageView
+            android:id="@+id/listok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_listok"
+            app:layout_constraintBottom_toBottomOf="@+id/profileDescpage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="37dp"
+            tools:layout_conversion_absoluteWidth="37dp" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bttmnavbackground"
+            app:itemIconSize="25dp"
+            app:itemIconTint="@color/bluedark"
+            app:itemTextColor="@color/bluedark"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bttmnav" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recview"
+            android:layout_width="match_parent"
+            android:layout_height="686dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addbttn"
+            tools:context=".MainActivity"
+            tools:layout_conversion_absoluteHeight="731dp"
+            tools:layout_conversion_absoluteWidth="393dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
