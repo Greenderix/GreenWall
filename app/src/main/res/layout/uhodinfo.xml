@@ -87,7 +87,7 @@
         app:layout_constraintBottom_toTopOf="@+id/desc_desc11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desc_img1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/rectinfo" />
 
     <TextView
