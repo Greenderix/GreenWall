@@ -1,6 +1,5 @@
 package com.example.gwsol.Repo;
 
-import com.example.gwsol.Model.Plant;
 import com.example.gwsol.Model.Uhod;
 import com.example.gwsol.R;
 
@@ -8,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UhodRepository {
-    private List<Uhod> uhods= new ArrayList<>();
+    private List<Uhod> uhods = new ArrayList<>();
 
     public UhodRepository() {
         Uhod uhod = new Uhod();
@@ -30,7 +29,8 @@ public class UhodRepository {
         uhods.add(uhod2);
 
     }
-    public List<Uhod> getUhods(){
+
+    public List<Uhod> getUhods() {
         return uhods;
     }
 }

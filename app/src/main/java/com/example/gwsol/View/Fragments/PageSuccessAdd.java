@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gwsol.R;
 import com.example.gwsol.ViewModel.PlantViewModel;
-import com.example.gwsol.databinding.PageLentaInfoBinding;
 import com.example.gwsol.databinding.SuccessaddBinding;
 
 public class PageSuccessAdd extends Fragment {
@@ -22,16 +21,16 @@ public class PageSuccessAdd extends Fragment {
     private String uhodinfoTag = "uhodinfoTag";
     SuccessaddBinding binding;
     PlantViewModel mViewModel;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = SuccessaddBinding.inflate(inflater, container,false);
+        binding = SuccessaddBinding.inflate(inflater, container, false);
 
         View v = binding.getRoot();
 
         return v;
 
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -75,19 +74,19 @@ public class PageSuccessAdd extends Fragment {
 
             return true;
         });
-        mViewModel.getNewPlant().observe(getViewLifecycleOwner(),result->{
+        mViewModel.getNewPlant().observe(getViewLifecycleOwner(), result -> {
             binding.EditName1.setText(result.getHeader());
             binding.descImg1.setImageResource(result.getImgname());
             binding.descr.setText(result.getDesc());
 
         });
-            binding.checker.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    getParentFragmentManager().beginTransaction()
-                            .replace(R.id.main_fragment, new Page_Profile()).addToBackStack(null).commit();
-                }
-            });
+        binding.checker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.main_fragment, new Page_Profile()).addToBackStack(null).commit();
+            }
+        });
 
     }
 }

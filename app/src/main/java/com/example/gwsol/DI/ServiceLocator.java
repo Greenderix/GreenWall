@@ -27,12 +27,11 @@ public class ServiceLocator {
     }
 
 
-
     public static ServiceLocator getInstance() {
         return serviceLocator;
     }
 
-    public static void init (Context context){
+    public static void init(Context context) {
         serviceLocator = new ServiceLocator(context);
     }
 
@@ -40,10 +39,11 @@ public class ServiceLocator {
         return usersRepository;
     }
 
-    public PlantRepository getPlantRepository(){
+    public PlantRepository getPlantRepository() {
         return plantRepository;
     }
-    public UhodRepository getUhodRepository(){
+
+    public UhodRepository getUhodRepository() {
         return uhodRepository;
     }
 

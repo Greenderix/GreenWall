@@ -2,8 +2,6 @@ package com.example.gwsol.Model;
 
 import androidx.annotation.NonNull;
 
-import java.util.Calendar;
-
 public class User {
 
     @NonNull
@@ -18,7 +16,13 @@ public class User {
     public void setFirstName(@NonNull String firstName) {
         this.firstName = firstName;
     }
-    public String getPassword(){return password;}
-    public void setPassword(@NonNull String password){this.password = password;}
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(@NonNull String password) {
+        this.password = password;
+    }
 
 }

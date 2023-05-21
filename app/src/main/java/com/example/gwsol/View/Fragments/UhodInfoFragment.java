@@ -11,11 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gwsol.R;
-import com.example.gwsol.ViewModel.PlantViewModel;
 import com.example.gwsol.ViewModel.UhodViewModel;
-import com.example.gwsol.databinding.PageLentaInfoBinding;
-import com.example.gwsol.databinding.PageUhodInfoBinding;
-import com.example.gwsol.databinding.UhodPageBinding;
 import com.example.gwsol.databinding.UhodinfoBinding;
 
 public class UhodInfoFragment extends Fragment {
@@ -28,13 +24,12 @@ public class UhodInfoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = UhodinfoBinding.inflate(inflater, container,false);
+        binding = UhodinfoBinding.inflate(inflater, container, false);
 
         View v = binding.getRoot();
 
         return v;
 
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -92,22 +87,5 @@ public class UhodInfoFragment extends Fragment {
                         .replace(R.id.main_fragment, new Page_uhod()).addToBackStack(null).commit();
             }
         });
-//        binding.imageView9.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    LentaInfoPageFragment.this.finalize();
-//                } catch (Throwable e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-
-
-
-
-        // binding.comingBtn.setBackgroundColor(Color.parseColor("F26060"));
-
-
     }
 }

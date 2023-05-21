@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,10 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.gwsol.Model.Plant;
 import com.example.gwsol.R;
 import com.example.gwsol.View.Adapter.MyPlantAdapter;
-import com.example.gwsol.View.Adapter.PlantAdapter;
 import com.example.gwsol.View.Adapter.PlantListener;
 import com.example.gwsol.ViewModel.PlantViewModel;
-import com.example.gwsol.databinding.PageLentaInfoBinding;
 import com.example.gwsol.databinding.ProfilePageBinding;
 
 
@@ -48,10 +45,10 @@ public class Page_Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = ProfilePageBinding.inflate(inflater,container,false);
+        binding = ProfilePageBinding.inflate(inflater, container, false);
 
         View v = binding.getRoot();
-        binding.recview.setLayoutManager(new GridLayoutManager(getContext(),2));
+        binding.recview.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         return v;
     }
@@ -104,8 +101,8 @@ public class Page_Profile extends Fragment {
             }
         });
         binding.profileDescpage.setText("Добавлено от Вас, " + mViewModel.getUsername());
-        mViewModel.getPlants().observe(getViewLifecycleOwner(), result->{
-            mAdapter = new MyPlantAdapter(this,  result.stream().filter(plant -> plant.getIsMine()).collect(Collectors.toList()), new PlantListener() {
+        mViewModel.getPlants().observe(getViewLifecycleOwner(), result -> {
+            mAdapter = new MyPlantAdapter(this, result.stream().filter(plant -> plant.getIsMine()).collect(Collectors.toList()), new PlantListener() {
 
 
                 @Override
@@ -115,12 +112,10 @@ public class Page_Profile extends Fragment {
                     if (lentaInfoPageFragment == null) {
                         lentaInfoPageFragment = new LentaInfoPageFragment();
                     }
-                    getParentFragmentManager().beginTransaction().replace(R.id.main_fragment, lentaInfoPageFragment ,profileinfoTag)
+                    getParentFragmentManager().beginTransaction().replace(R.id.main_fragment, lentaInfoPageFragment, profileinfoTag)
                             .addToBackStack(null)
                             .commit();
                 }
-
-
 
 
             });
@@ -128,14 +123,14 @@ public class Page_Profile extends Fragment {
             binding.recview.setAdapter(mAdapter);
             int count = mAdapter.getItemCount();
             String textCount = "";
-            if (count == 0  | count >= 5){
-                textCount = String.valueOf(count)+" Растений";
-            } else if (count == 1){
-                textCount = String.valueOf(count)+" Растение";
-            } else if ( count >= 2 && count <=4) {
-                textCount = String.valueOf(count)+" Растения";
+            if (count == 0 | count >= 5) {
+                textCount = String.valueOf(count) + " Растений";
+            } else if (count == 1) {
+                textCount = String.valueOf(count) + " Растение";
+            } else if (count >= 2 && count <= 4) {
+                textCount = String.valueOf(count) + " Растения";
             } else {
-                textCount = String.valueOf(count)+" Растения!!!!";
+                textCount = String.valueOf(count) + " Растения!!!!";
             }
 
             binding.textCount.setText(textCount);

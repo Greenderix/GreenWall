@@ -2,7 +2,6 @@ package com.example.gwsol.View.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -14,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.gwsol.R;
 import com.example.gwsol.ViewModel.PlantViewModel;
 import com.example.gwsol.databinding.PageLentaInfoBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class LentaInfoPageFragment extends Fragment {
     PageLentaInfoBinding binding;
@@ -26,13 +24,11 @@ public class LentaInfoPageFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = PageLentaInfoBinding.inflate(inflater, container,false);
+        binding = PageLentaInfoBinding.inflate(inflater, container, false);
 
         View v = binding.getRoot();
 
         return v;
-
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -83,29 +79,12 @@ public class LentaInfoPageFragment extends Fragment {
             binding.descImg1.setImageResource(result.getImgname());
 
         });
-            binding.imageButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    getParentFragmentManager().beginTransaction()
-                    .replace(R.id.main_fragment, new LentaPageFragment()).addToBackStack(null).commit();
-                }
-            });
-//        binding.imageView9.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    LentaInfoPageFragment.this.finalize();
-//                } catch (Throwable e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-
-
-
-
-                // binding.comingBtn.setBackgroundColor(Color.parseColor("F26060"));
-
-
+        binding.imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.main_fragment, new LentaPageFragment()).addToBackStack(null).commit();
+            }
+        });
     }
 }

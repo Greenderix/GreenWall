@@ -17,8 +17,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.gwsol.R;
 import com.example.gwsol.ViewModel.PlantViewModel;
 import com.example.gwsol.databinding.AddnewnewBinding;
-import com.example.gwsol.databinding.AddnewplantBinding;
-import com.example.gwsol.databinding.ProfilePageBinding;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -3,7 +3,6 @@ package com.example.gwsol.View.Fragments;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +14,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gwsol.R;
 import com.example.gwsol.ViewModel.UserViewModel;
-import com.example.gwsol.databinding.FragmentPageRegBinding;
 import com.example.gwsol.databinding.PagePasswordBinding;
 
-public class Page_passwordFragment extends Fragment  {
+public class Page_passwordFragment extends Fragment {
     PagePasswordBinding binding;
     private UserViewModel mViewModel;
 
@@ -30,7 +28,6 @@ public class Page_passwordFragment extends Fragment  {
         View v = binding.getRoot();
         return v;
 
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -38,7 +35,6 @@ public class Page_passwordFragment extends Fragment  {
         super.onViewCreated(view, savedInstanceState);
 
         mViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
-
 
 
         binding.password.addTextChangedListener(new TextWatcher() {
@@ -64,18 +60,17 @@ public class Page_passwordFragment extends Fragment  {
             public void onClick(View view) {
                 String name = mViewModel.getFirstName().getValue();
                 String password = mViewModel.getPassword().getValue();
-                mViewModel.checkUser(name, password).observe(getViewLifecycleOwner(),result->{
-                    if (Boolean.TRUE.equals(result)){
+                mViewModel.checkUser(name, password).observe(getViewLifecycleOwner(), result -> {
+                    if (Boolean.TRUE.equals(result)) {
                         getParentFragmentManager().beginTransaction()
                                 .replace(R.id.main_fragment, new LentaPageFragment()).addToBackStack(null).commit();
-                    }else{
+                    } else {
                         binding.passwordLayout.setError("Неверно введены данные :с");
                     }
                 });
 
             }
         });
-
 
 
     }

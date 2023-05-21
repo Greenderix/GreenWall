@@ -6,10 +6,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gwsol.databinding.SingleRowBinding;
 import com.example.gwsol.databinding.SingleRowUhodBinding;
 
-public class UhodViewHolder extends RecyclerView.ViewHolder{
+public class UhodViewHolder extends RecyclerView.ViewHolder {
     ImageView plantImage;
     TextView plantHeader;
     TextView plantDescription;

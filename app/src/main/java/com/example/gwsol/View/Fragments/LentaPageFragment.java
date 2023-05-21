@@ -3,7 +3,6 @@ package com.example.gwsol.View.Fragments;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -38,7 +37,7 @@ public class LentaPageFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = PageLentaBinding.inflate(inflater, container, false);
-        binding.recview.setLayoutManager(new GridLayoutManager(getContext(),2));
+        binding.recview.setLayoutManager(new GridLayoutManager(getContext(), 2));
         View view = binding.getRoot();
         view.setFocusableInTouchMode(true);
         view.requestFocus();
@@ -54,8 +53,6 @@ public class LentaPageFragment extends Fragment {
             }
         });
         return view;
-
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
 
@@ -63,14 +60,12 @@ public class LentaPageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(requireActivity()).get(PlantViewModel.class);
-//        mViewModel = new ViewModelProvider(requireActivity()).get(PlantViewModel.class);
-
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.uhod:
-                     Page_uhod page_uhod = (Page_uhod) getParentFragmentManager().findFragmentByTag(uhodTag);
+                    Page_uhod page_uhod = (Page_uhod) getParentFragmentManager().findFragmentByTag(uhodTag);
                     if (page_uhod == null) {
                         page_uhod = new Page_uhod();
                     }
@@ -102,7 +97,7 @@ public class LentaPageFragment extends Fragment {
 
             return true;
         });
-        mViewModel.getPlants().observe(getViewLifecycleOwner(), result->{
+        mViewModel.getPlants().observe(getViewLifecycleOwner(), result -> {
             mAdapter = new PlantAdapter(this, result, new PlantListener() {
 
 
@@ -113,12 +108,10 @@ public class LentaPageFragment extends Fragment {
                     if (lentaInfoPageFragment == null) {
                         lentaInfoPageFragment = new LentaInfoPageFragment();
                     }
-                    getParentFragmentManager().beginTransaction().replace(R.id.main_fragment, lentaInfoPageFragment ,lentainfoTag)
+                    getParentFragmentManager().beginTransaction().replace(R.id.main_fragment, lentaInfoPageFragment, lentainfoTag)
                             .addToBackStack(null)
                             .commit();
                 }
-
-                
 
 
             });
@@ -126,14 +119,14 @@ public class LentaPageFragment extends Fragment {
 
             int count = mAdapter.getItemCount();
             String textCount = "";
-            if (count == 0  | count >= 5){
-                textCount = String.valueOf(count)+" Растений";
-            } else if (count == 1){
-                textCount = String.valueOf(count)+" Растение";
-            } else if ( count >= 2 && count <=4) {
-                textCount = String.valueOf(count)+" Растения";
+            if (count == 0 | count >= 5) {
+                textCount = String.valueOf(count) + " Растений";
+            } else if (count == 1) {
+                textCount = String.valueOf(count) + " Растение";
+            } else if (count >= 2 && count <= 4) {
+                textCount = String.valueOf(count) + " Растения";
             } else {
-                textCount = String.valueOf(count)+" Растения!!!!";
+                textCount = String.valueOf(count) + " Растения!!!!";
             }
 
             binding.textCount.setText(textCount);
@@ -141,12 +134,5 @@ public class LentaPageFragment extends Fragment {
 
     }
 
-    //        binding.recommendation.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                getParentFragmentManager().beginTransaction()
-//                    .replace(R.id.main_fragment, new RegFirstName()).addToBackStack(null).commit();
-//            }
-//        });
 
 }

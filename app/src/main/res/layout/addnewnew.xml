@@ -49,26 +49,6 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/green_wall" />
 
-    <!--    <com.google.android.material.textfield.TextInputEditText-->
-    <!--        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"-->
-    <!--        android:layout_width="270dp"-->
-    <!--        android:layout_height="50dp"-->
-    <!--        android:background="@color/white"-->
-
-
-    <!--        android:drawableRight="@drawable/____________"-->
-    <!--        android:drawablePadding="@drawable/____________"-->
-
-    <!--        android:text="Voiti"-->
-
-
-    <!--        app:layout_constraintBottom_toTopOf="@+id/imageView5"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.496"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView3"-->
-    <!--        app:layout_constraintVertical_bias="0.709" />-->
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

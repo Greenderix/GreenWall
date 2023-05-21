@@ -1,20 +1,12 @@
 package com.example.gwsol.View.Adapter;
 
-import android.app.Dialog;
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gwsol.Model.Plant;
-import com.example.gwsol.R;
 import com.example.gwsol.View.Fragments.LentaPageFragment;
 
 import com.example.gwsol.databinding.SingleRowBinding;
@@ -39,7 +31,7 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantviewHolder> {
     @NonNull
     @Override
     public PlantviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        SingleRowBinding binding = SingleRowBinding.inflate(LayoutInflater.from(parent.getContext()), parent,false);
+        SingleRowBinding binding = SingleRowBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new PlantviewHolder(binding);
     }
 
@@ -53,13 +45,6 @@ public class PlantAdapter extends RecyclerView.Adapter<PlantviewHolder> {
         holder.getPlantHeader().setText(plant.getHeader());
         holder.getPlantDescription().setText(plant.getDesc());
         holder.getPlantLayout().setOnClickListener(view -> mCallback.onClick(plant));
-//
-//        holder.getPlantLayout().setOnClickListener(new View.PlantListener() {
-//
-//            public void onClick(View view) {
-//                mCallback.onCLick(plant);
-//            }
-//        });
     }
 
     @Override

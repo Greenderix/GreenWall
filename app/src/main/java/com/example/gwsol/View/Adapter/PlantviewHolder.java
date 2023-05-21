@@ -4,23 +4,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gwsol.Model.Plant;
-import com.example.gwsol.R;
 import com.example.gwsol.databinding.SingleRowBinding;
 
-public class PlantviewHolder extends RecyclerView.ViewHolder{
-//    ImageView img;
-//    TextView t1,t2;
-//    public PlantviewHolder(@NonNull View itemView)
-//    {
-//        super(itemView);
-//        img=(ImageView)itemView.findViewById(R.id.img1);
-//        t1=(TextView)itemView.findViewById(R.id.t1);
-//        t2=(TextView)itemView.findViewById(R.id.t2);
-//    }
+public class PlantviewHolder extends RecyclerView.ViewHolder {
     ImageView plantImage;
     TextView plantHeader;
     TextView plantDescription;

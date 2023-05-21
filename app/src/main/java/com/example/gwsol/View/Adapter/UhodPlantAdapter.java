@@ -6,17 +6,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gwsol.Model.Plant;
 import com.example.gwsol.Model.Uhod;
-import com.example.gwsol.View.Fragments.LentaPageFragment;
 import com.example.gwsol.View.Fragments.Page_uhod;
-import com.example.gwsol.databinding.SingleRowBinding;
 import com.example.gwsol.databinding.SingleRowUhodBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UhodPlantAdapter extends RecyclerView.Adapter<UhodViewHolder>{
+public class UhodPlantAdapter extends RecyclerView.Adapter<UhodViewHolder> {
     private Page_uhod mFragment;
     private List<Uhod> mUhods = new ArrayList<>();
     private UhodListener mCallback;
@@ -31,7 +28,7 @@ public class UhodPlantAdapter extends RecyclerView.Adapter<UhodViewHolder>{
     @NonNull
     @Override
     public UhodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        SingleRowUhodBinding binding = SingleRowUhodBinding.inflate(LayoutInflater.from(parent.getContext()), parent,false);
+        SingleRowUhodBinding binding = SingleRowUhodBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new UhodViewHolder(binding);
     }
 
@@ -45,13 +42,6 @@ public class UhodPlantAdapter extends RecyclerView.Adapter<UhodViewHolder>{
         holder.getPlantHeader().setText(uhod.getHeader());
 
         holder.getPlantLayout().setOnClickListener(view -> mCallback.onClick(uhod));
-//
-//        holder.getPlantLayout().setOnClickListener(new View.PlantListener() {
-//
-//            public void onClick(View view) {
-//                mCallback.onCLick(plant);
-//            }
-//        });
     }
 
     @Override
